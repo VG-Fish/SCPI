@@ -108,7 +108,7 @@ def analyze_and_plot(v_meas: np.ndarray, i_meas: np.ndarray) -> None:
     )
 
     plt.tight_layout()
-    plt.savefig("ohms_law_iv_curve.png", dpi=150, bbox_inches="tight")
+    plt.savefig("plots/ohms_law_iv_curve.png", dpi=150, bbox_inches="tight")
     print("\nPlot successfully saved as 'ohms_law_iv_curve.png'")
     plt.close()
 

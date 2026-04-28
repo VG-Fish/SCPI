@@ -68,7 +68,7 @@ def plot_xy_mode(v_a0: list[float], v_a1: list[float]) -> None:
     plt.axis("equal")
 
     plt.tight_layout()
-    plt.savefig("xy_mode_plot.png", dpi=150)
+    plt.savefig("plots/xy_mode_plot.png", dpi=150)
     plt.close()
 
 

@@ -105,7 +105,7 @@ def main():
     ax.grid(True, alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig("superposition_analysis.png", dpi=200)
+    plt.savefig("plots/superposition_analysis.png", dpi=200)
     print("\nGraph saved as 'superposition_analysis.png'")
 
 
