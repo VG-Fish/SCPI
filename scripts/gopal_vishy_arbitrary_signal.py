@@ -1,10 +1,7 @@
 """
-Arbitrary Signal XY Mode Display
-=================================
+Arbitrary Signal XY Mode Display:
 This program reads voltage measurements from Arduino pins A0 and A1 via SCPI protocol
-and displays them in XY mode (like an oscilloscope XY display) where A0 is plotted on
-the X-axis and A1 is plotted on the Y-axis. This is useful for visualizing the
-relationship between two signals or complex waveforms.
+and displays them in XY mode, where A0 is plotted on the X-axis and A1 is plotted on the Y-axis.
 """
 
 import argparse
@@ -57,7 +54,6 @@ def read_voltages(
                 # Send SCPI command to measure voltages on pins A0 and A1
                 ser.write(b"MEAS:VOLT?A0,A1\n")
 
-                # Read the response and decode from bytes to string
                 response: str = ser.readline().decode("utf-8").strip()
                 # Only process valid responses (not error messages)
                 if response and not response.startswith("ERR"):
@@ -79,7 +75,7 @@ def read_voltages(
 
 def plot_xy_mode(v_a0: list[float], v_a1: list[float]) -> None:
     """
-    Plot voltages in XY mode (like oscilloscope XY display).
+    Plot voltages in XY mode.
     A0 on X-axis, A1 on Y-axis. This visualization reveals patterns and relationships
     between two simultaneous signals.
 
@@ -124,7 +120,10 @@ if __name__ == "__main__":
         "--port", help="Serial port (e.g., /dev/cu.usbmodem14101 or COM3)"
     )
     parser.add_argument(
-        "--duration", type=int, default=SAMPLING_DURATION, help=f"Sampling duration in seconds (default: {SAMPLING_DURATION})"
+        "--duration",
+        type=int,
+        default=SAMPLING_DURATION,
+        help=f"Sampling duration in seconds (default: {SAMPLING_DURATION})",
     )
     args: argparse.Namespace = parser.parse_args()
 

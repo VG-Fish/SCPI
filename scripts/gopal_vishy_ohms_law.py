@@ -1,6 +1,5 @@
 """
-Ohm's Law Verification via Arduino SCPI
-========================================
+Ohm's Law Verification via Arduino SCPI:
 This program automates the verification of Ohm's Law (V = IR) by sweeping through a range
 of voltages, measuring the resulting current, and plotting an I-V curve. The measured
 resistance from the I-V slope is compared against the expected resistance value.
@@ -16,12 +15,12 @@ import serial
 
 # Resistor values used in the circuit
 EXPECTED_R: float = 1000.0  # Expected DUT (Device Under Test) resistance in ohms
-SHUNT_R: float = 100.0      # Series shunt resistor used for current measurement in ohms
+SHUNT_R: float = 100.0  # Series shunt resistor used for current measurement in ohms
 
 # Voltage sweep parameters
-VSTART: float = 0.0         # Starting voltage for the sweep (V)
-VSTOP: float = 5.0          # Ending voltage for the sweep (V)
-VSTEP: float = 0.5          # Voltage step size (V)
+VSTART: float = 0.0  # Starting voltage for the sweep (V)
+VSTOP: float = 5.0  # Ending voltage for the sweep (V)
+VSTEP: float = 0.5  # Voltage step size (V)
 
 # Settling time for measurements after voltage change (seconds)
 SETTLE_S: float = 0.3

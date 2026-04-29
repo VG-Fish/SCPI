@@ -1,5 +1,5 @@
 # SCPI Extra Credit Project for ECE 2k7 @ Purdue
-- Note: LLMs were used to create plotting code, debugging, and for some code modifications/refactors.
+- Note: LLMs were used to create plotting code, debugging, for some code modifications/refactors, and for commenting files.
 
 ## Project Details
 - `uv` was used to create the virtual environment and to run the scripts.

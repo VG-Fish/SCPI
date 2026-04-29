@@ -1,6 +1,5 @@
 """
-Voltage Superposition Analysis
-==============================
+Voltage Superposition Analysis:
 This program measures the superposition of two input signals (transmitter and data signals)
 to verify the superposition principle in linear circuits. It measures three voltages:
 - V_trans: Transmitter signal
@@ -21,7 +20,7 @@ import serial
 
 # Resistor values used in the circuit for power calculations
 R_T = 10000.0  # Transmitter circuit resistance in ohms
-R_D = 5600.0   # Data circuit resistance in ohms
+R_D = 5600.0  # Data circuit resistance in ohms
 R_L = 56000.0  # Load resistance in ohms
 
 

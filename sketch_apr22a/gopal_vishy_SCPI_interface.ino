@@ -26,9 +26,7 @@ int getPinFromString(String p) {
   return -1;
 }
 
-void setup() {
-  Serial.begin(SERIAL_BAUD);
-}
+void setup() { Serial.begin(SERIAL_BAUD); }
 
 void handleCommand(String cmd) {
   cmd.trim();
